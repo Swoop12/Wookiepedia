@@ -12,6 +12,9 @@
 		F707C2F1214B067000CA35BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F707C2F0214B067000CA35BF /* Assets.xcassets */; };
 		F707C2F4214B067000CA35BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F707C2F2214B067000CA35BF /* LaunchScreen.storyboard */; };
 		F707C2F7214B067000CA35BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F707C2F6214B067000CA35BF /* main.m */; };
+		F707C2FF214B1D0700CA35BF /* SWAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F707C2FE214B1D0700CA35BF /* SWAPIClient.m */; };
+		F707C302214B2B2F00CA35BF /* CategoresCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F707C301214B2B2F00CA35BF /* CategoresCollectionViewController.m */; };
+		F707C305214B2EF600CA35BF /* CategoryCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F707C304214B2EF600CA35BF /* CategoryCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,12 @@
 		F707C2F3214B067000CA35BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F707C2F5214B067000CA35BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F707C2F6214B067000CA35BF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F707C2FD214B1D0700CA35BF /* SWAPIClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWAPIClient.h; sourceTree = "<group>"; };
+		F707C2FE214B1D0700CA35BF /* SWAPIClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWAPIClient.m; sourceTree = "<group>"; };
+		F707C300214B2B2F00CA35BF /* CategoresCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategoresCollectionViewController.h; sourceTree = "<group>"; };
+		F707C301214B2B2F00CA35BF /* CategoresCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CategoresCollectionViewController.m; sourceTree = "<group>"; };
+		F707C303214B2EF600CA35BF /* CategoryCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategoryCollectionViewCell.h; sourceTree = "<group>"; };
+		F707C304214B2EF600CA35BF /* CategoryCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CategoryCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +71,12 @@
 				F707C2F2214B067000CA35BF /* LaunchScreen.storyboard */,
 				F707C2F5214B067000CA35BF /* Info.plist */,
 				F707C2F6214B067000CA35BF /* main.m */,
+				F707C2FD214B1D0700CA35BF /* SWAPIClient.h */,
+				F707C2FE214B1D0700CA35BF /* SWAPIClient.m */,
+				F707C300214B2B2F00CA35BF /* CategoresCollectionViewController.h */,
+				F707C301214B2B2F00CA35BF /* CategoresCollectionViewController.m */,
+				F707C303214B2EF600CA35BF /* CategoryCollectionViewCell.h */,
+				F707C304214B2EF600CA35BF /* CategoryCollectionViewCell.m */,
 			);
 			path = Wookieepedia;
 			sourceTree = "<group>";
@@ -136,8 +151,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F707C305214B2EF600CA35BF /* CategoryCollectionViewCell.m in Sources */,
 				F707C2F7214B067000CA35BF /* main.m in Sources */,
 				F707C2E9214B066F00CA35BF /* AppDelegate.m in Sources */,
+				F707C302214B2B2F00CA35BF /* CategoresCollectionViewController.m in Sources */,
+				F707C2FF214B1D0700CA35BF /* SWAPIClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

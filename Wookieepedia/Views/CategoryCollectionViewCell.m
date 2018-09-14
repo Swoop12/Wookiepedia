@@ -8,24 +8,23 @@
 
 #import "CategoryCollectionViewCell.h"
 
+//Private @interface (header) file
 @interface CategoryCollectionViewCell ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *categoryImageView;
 @property (weak, nonatomic) IBOutlet UILabel *categoryLabel;
 
-
 @end
 
 @implementation CategoryCollectionViewCell
 
--(NSString *)categoryName{
-    return _category.allKeys.firstObject;
-}
-
+//DidSet gets called everytime we set the category property
 -(void)setCategory:(NSDictionary *)category{
     
+    _category = category;
+
     NSString * categoryName = category.allKeys.firstObject;
-    self.categoryLabel = categoryName;
+    self.categoryLabel.text = categoryName;
     self.categoryImageView.image = [UIImage imageNamed: categoryName];
 }
 

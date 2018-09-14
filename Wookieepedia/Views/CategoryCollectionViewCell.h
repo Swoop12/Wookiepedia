@@ -12,8 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CategoryCollectionViewCell : UICollectionViewCell
 
+//Landing Pad
 @property (nonatomic, readwrite) NSDictionary *category;
-@property (nonatomic, strong) NSString *categoryName;
 
 @end
 

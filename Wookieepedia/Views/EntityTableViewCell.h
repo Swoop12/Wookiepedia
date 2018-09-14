@@ -1,5 +1,5 @@
 //
-//  CategoresCollectionViewController.h
+//  EntityTableViewCell.h
 //  Wookieepedia
 //
 //  Created by DevMountain on 9/13/18.
@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Person.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CategoresCollectionViewController : UICollectionViewController
+@interface EntityTableViewCell : UITableViewCell
 
-@property (nonatomic, readwrite) NSArray *categories;
+@property (nonatomic, readwrite) Person *person;
 
 @end
 

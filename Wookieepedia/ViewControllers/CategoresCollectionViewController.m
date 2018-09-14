@@ -8,6 +8,7 @@
 
 #import "CategoresCollectionViewController.h"
 #import "CategoryCollectionViewCell.h"
+#import "EntityTableViewController.h"
 #import "SWAPIClient.h"
 
 @interface CategoresCollectionViewController ()
@@ -28,8 +29,11 @@ static NSString * const reuseIdentifier = @"categoryCell";
     }];
 }
 
+//DidSet in swift
 -(void)setCategories:(NSArray *)categories{
     _categories = categories;
+    
+    //DispatchQueue.main.async
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.collectionView reloadData];
     });
@@ -39,8 +43,10 @@ static NSString * const reuseIdentifier = @"categoryCell";
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    EntityTableViewController *destinationVC = [segue destinationViewController];
+    NSIndexPath *indexPath = [[self.collectionView indexPathsForSelectedItems] firstObject];
+    NSDictionary *category = self.categories[indexPath.row];
+    destinationVC.category = category;
 }
 
 #pragma mark <UICollectionViewDataSource>
@@ -52,10 +58,10 @@ static NSString * const reuseIdentifier = @"categoryCell";
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
     CategoryCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    NSDictionary *category = _categories[indexPath.row];
-//    NSString *categoryName = category.allKeys.firstObject;
-//    UIImage * categoryImage = [UIImage imageNamed:categoryName];
+    NSDictionary *category = self.categories[indexPath.row];
+
     cell.category = category;
     return cell;
 }
